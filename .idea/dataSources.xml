@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="335779378">
+    <data-source source="LOCAL" name="Rails bikes: development" uuid="862788f0-fec7-4b56-926e-7a295879573d">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/bikes_dev</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>dfd9dfc6dfc5dfc8dfc5dfcedfcbdf9bdf98df99</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails bikes: test" uuid="a6836430-eae1-45fa-ba17-7928e16d3650">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/bikes_test</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>dfd9dfc6dfc5dfc8dfc5dfcedfcbdf9bdf98df99</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails bikes: production" uuid="5f47f19a-04cd-49c7-886a-fee060d97725">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/bikes_prod</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>dfd9dfc6dfc5dfc8dfc5dfcedfcbdf9bdf98df99</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+
