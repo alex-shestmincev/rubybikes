@@ -22,7 +22,7 @@
             <td><%= link_to t('watch_link'), bicycle_path(bicycle) %></td>
             <td><%= link_to t('edit_link'), edit_bicycle_path(bicycle) %></td>
 
-            <td><%= link_to t('delete_link'), bicycle_path(bicycle), :confirm => 'Are you sure?', :method => :delete %></td>
+            <td><%= link_to t('delete_link'), bicycle, data:{ :confirm => 'Are you sure?'}, :method => :delete %></td>
           </tr>
       <% end %>
       </tbody>
@@ -30,7 +30,7 @@
 
 
 <% else %>
-    <%= t('no_doctors_message') %>
+    <%= t('no_bicycle_message') %>
 <% end %>
 
 
