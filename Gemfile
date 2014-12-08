@@ -2,7 +2,11 @@ source 'https://rubygems.org'
 ruby '2.1.3'
 gem 'heroku'
 
-gem 'pg', group: :production
+
+group :pruduction do
+  gem 'rails_12factor'
+  gem 'pg'
+end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
