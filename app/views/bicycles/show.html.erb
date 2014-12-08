@@ -1,0 +1,23 @@
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th><%= t('bicycle_title') %></th>
+    <th><%= t('bicycle_key') %> </th>
+  </tr>
+  </thead>
+
+  <tbody>
+
+      <tr>
+        <td><%= @bicycle.title %></td>
+        <td><%= @bicycle.key %></td>
+        <td><%= link_to t('watch_link'), bicycle_path(@bicycle) %></td>
+        <td><%= link_to t('edit_link'), edit_bicycle_path(@bicycle) %></td>
+
+        <td><%= link_to t('delete_link'), bicycle_path(@bicycle), :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
+
+  </tbody>
+</table>
+
+<%= link_to 'Back', bicycles_path %>
