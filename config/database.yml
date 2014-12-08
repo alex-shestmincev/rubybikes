@@ -22,5 +22,5 @@ test:
   database: bikes_test
 
 production:
-  <<: *default
-  database: bikes_prod
+  adapter: postgresql
+  database: medical_production
