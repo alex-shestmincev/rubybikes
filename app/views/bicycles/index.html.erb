@@ -19,7 +19,7 @@
           <tr>
             <td><%= bicycle.title %></td>
             <td><%= bicycle.key %></td>
-            <td><%= link_to t('watch_link'), bicycle_path(bicycle) %></td>
+            <td><a class="btn " href=""><i class="icon-search"></i></a><%= link_to t('watch_link'), bicycle_path(bicycle) %></td>
             <td><%= link_to t('edit_link'), edit_bicycle_path(bicycle) %></td>
 
             <td><%= link_to t('delete_link'), bicycle, data:{ :confirm => 'Are you sure?'}, :method => :delete %></td>
