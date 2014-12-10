@@ -1,0 +1,45 @@
+<%= render 'nav' %>
+
+<% if notice %>
+    <p id="notice" ><%= notice %></p>
+<% end %>
+
+<h1><%= t('tracks_list') %></h1>
+
+<% if @tracks.any? %>
+
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th><%= t('tracks_title') %></th>
+        <th><%= t('tracks_bicycle') %> </th>
+        <th><%= t('tracks_user') %> </th>
+        <th><%= t('tracks_distance') %> </th>
+        <th><%= t('status') %> </th>
+        <th><%= t('actions') %> </th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @tracks.each do |track| %>
+          <tr>
+            <td><%= track.title %></td>
+            <td><%= track.bicycle_id %></td>
+            <td><%= track.user_id %></td>
+            <td><%= track.distance %></td>
+            <td><%= tracks_status_options[track.status] %></td>
+
+            <td>
+              <a class="btn " href="<%= url_for(track_path(track)) %>"><i class="icon-ok"></i></a>
+              <a class="btn " href="<%= url_for(edit_track_path(track)) %>"><i class="icon-edit"></i></a>
+              <%= link_to '<i class="icon-remove"></i>'.html_safe, track, data:{ :confirm => 'Are you sure?'}, :method => :delete, :class => 'btn' %>
+            </td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+
+<% else %>
+    <%= t('no_bicycle_message') %>
+<% end %>

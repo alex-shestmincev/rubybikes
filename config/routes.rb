@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :bicycles
+  resources :bicycles, :tracks
 
-
+  root 'tracks#index'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

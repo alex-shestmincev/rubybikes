@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141207202137) do
+ActiveRecord::Schema.define(version: 20141210195851) do
 
   create_table "bicycles", force: true do |t|
     t.string   "title"
@@ -19,6 +19,17 @@ ActiveRecord::Schema.define(version: 20141207202137) do
     t.integer  "status"
     t.text     "description"
     t.integer  "distance"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tracks", force: true do |t|
+    t.string   "title"
+    t.integer  "bicycle_id"
+    t.integer  "user_id"
+    t.integer  "status"
+    t.integer  "distance"
+    t.string   "routes_points"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

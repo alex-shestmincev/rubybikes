@@ -24,3 +24,8 @@ ru:
 
 #  controllers messages
   bicycle_edited: "Успешное редактирование данных %{bicycle}"
+
+# statuses
+  active: "Active"
+  finished: "Finished"
+  reserved: "Reserved"
