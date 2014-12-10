@@ -40,7 +40,7 @@ class BicyclesController < ApplicationController
     if @bicycle.destroy
       flash[:notice] = t('bicycle_deleted', bicycle: "#{@bicycle.title}")
     else
-      flash[:notice] = t('bicycle_delete_fail', doctor: "#{@bicycle.title}")
+      flash[:notice] = t('bicycle_delete_fail', bicycle: "#{@bicycle.title}")
     end
     redirect_to bicycles_path
   end

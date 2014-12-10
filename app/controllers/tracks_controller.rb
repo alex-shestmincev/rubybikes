@@ -37,12 +37,12 @@ class TracksController < ApplicationController
   end
 
   def destroy
-    if @bicycle.destroy
-      flash[:notice] = t('bicycle_deleted', bicycle: "#{@bicycle.title}")
+    if @track.destroy
+      flash[:notice] = t('tracks_deleted', track: "#{@track.title}")
     else
-      flash[:notice] = t('bicycle_delete_fail', doctor: "#{@bicycle.title}")
+      flash[:notice] = t('tracks_delete_fail', track: "#{@track.title}")
     end
-    redirect_to bicycles_path
+    redirect_to tracks_path
   end
 
   private
