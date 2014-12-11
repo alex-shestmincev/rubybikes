@@ -1,0 +1,24 @@
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th><%= t('track_title') %></th>
+    <th><%= t('track_user') %> </th>
+  </tr>
+  </thead>
+
+  <tbody>
+
+  <tr>
+    <td><%= @track.title %></td>
+    <td><%= @track.user_id %></td>
+    <td>
+        <%= link_to t('watch_link'), track_path(@track) %>
+        <%= link_to t('edit_link'), edit_track_path(@track) %>
+        <%= link_to t('delete_link'), track_path(@track), :confirm => 'Are you sure?', :method => :delete %>
+    </td>
+  </tr>
+
+  </tbody>
+</table>
+
+<%= link_to 'Back', tracks_path %>

@@ -24,7 +24,9 @@
       <% @tracks.each do |track| %>
           <tr>
             <td><%= track.title %></td>
-            <td><%= track.bicycle_id %></td>
+            <td>
+              <%= link_to track.bicycle.title, bicycle_path(track.bicycle) %>
+            </td>
             <td><%= track.user_id %></td>
             <td><%= track.distance %></td>
             <td><%= tracks_status_options[track.status] %></td>
