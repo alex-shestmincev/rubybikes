@@ -1,0 +1,55 @@
+<h1><%= t('users_list') %></h1>
+
+<% if @users.any? %>
+
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th><%= t('users_id') %></th>
+        <th><%= t('users_email') %> </th>
+        <th><%= t('users_sign_in') %> </th>
+        <th><%= t('users_ip') %> </th>
+        <th><%= t('users_created_updated') %> </th>
+        <th><%= t('actions') %> </th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @users.each do |user| %>
+          <tr>
+            <td><%= user.id %></td>
+            <td><%= user.email %></td>
+            <td>
+              <%= t('last') %>: <br/>
+              <%= user.last_sign_in_at %><br/>
+              <%= t('current') %>: <br/>
+              <%= user.current_sign_in_at %><br/>
+              <%= t('users_sign_in_count') %>:
+              <%= user.sign_in_count %>
+            </td>
+            <td>
+              <%= t('last') %>: <br/>
+              <%= user.last_sign_in_ip %><br/>
+              <%= t('current') %>: <br/>
+              <%= user.current_sign_in_ip %><br/>
+            </td>
+            <td>
+              <%= t('created') %>:<br/>
+              <%= user.created_at %><br/>
+              <%= t('updated') %>:<br/>
+              <%= user.updated_at %><br/>
+            </td>
+            <td>
+              <a class="btn " href="<%= url_for(user_path(user)) %>"><i class="icon-ok"></i></a><br/>
+              <a class="btn " href="<%= url_for(edit_user_path(user)) %>"><i class="icon-edit"></i></a><br/>
+              <%= link_to '<i class="icon-remove"></i>'.html_safe, user, data:{ :confirm => 'Are you sure?'}, :method => :delete, :class => 'btn' %>
+            </td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+
+<% else %>
+    <%= t('no_users_message') %>
+<% end %>

@@ -1,5 +1,5 @@
 class BicyclesController < ApplicationController
-
+  before_filter :authenticate_user!, except: [:show, :index]
   before_action :bicycle_find_by_id, only: [:edit,:update,:show,:destroy]
 
   def index

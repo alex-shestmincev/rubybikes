@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
 
-  resources :bicycles, :tracks
+  get 'users/profile'
+
+  devise_for :users
+  resources :bicycles, :tracks, :users
 
   root 'tracks#index'
+  #get 'users/profile', as: 'user_root'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

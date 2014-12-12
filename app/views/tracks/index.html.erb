@@ -1,9 +1,5 @@
 <%= render 'nav' %>
 
-<% if notice %>
-    <p id="notice" ><%= notice %></p>
-<% end %>
-
 <h1><%= t('tracks_list') %></h1>
 
 <% if @tracks.any? %>
