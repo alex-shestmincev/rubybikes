@@ -1,5 +1,6 @@
 class TracksController < ApplicationController
   layout "application"
+  before_filter :authenticate_user!, except: [:show, :index]
   before_action :track_find_by_id, only: [:edit,:update,:show,:destroy]
 
   def index
