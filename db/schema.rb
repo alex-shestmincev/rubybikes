@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20141212224251) do
     t.integer  "user_id"
     t.integer  "status"
     t.integer  "distance"
-    t.string   "routes_points"
+    t.text     "routes_points"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
