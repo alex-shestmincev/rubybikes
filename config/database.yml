@@ -23,4 +23,4 @@ test:
 
 production:
   adapter: postgresql
-  database: medical_production
+  database: bikes_dev
