@@ -16,10 +16,11 @@
           <tr>
             <td><%= bicycle.title %></td>
             <td><%= bicycle.key %></td>
-            <td><a class="btn " href="<%= url_for(bicycle_path(bicycle)) %>"><i class="icon-ok"></i></a></td>
-            <td><a class="btn " href="<%= url_for(edit_bicycle_path(bicycle)) %>"><i class="icon-edit"></i></a></td>
-
-            <td><%= link_to '<i class="icon-remove">'.html_safe, bicycle, data:{ :confirm => 'Are you sure?'}, :method => :delete, :class => 'btn' %></td>
+            <td>
+              <a class="btn " href="<%= url_for(bicycle_path(bicycle)) %>"><i class="icon-ok"></i></a>
+              <a class="btn " href="<%= url_for(edit_bicycle_path(bicycle)) %>"><i class="icon-edit"></i></a>
+              <%= link_to '<i class="icon-remove"></i>'.html_safe, bicycle, data:{ :confirm => 'Are you sure?'}, :method => :delete, :class => 'btn' %>
+            </td>
           </tr>
       <% end %>
       </tbody>

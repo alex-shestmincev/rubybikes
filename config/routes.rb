@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'users/profile'
 
   devise_for :users
-  resources :bicycles, :tracks, :users
+  resources :bicycles, :tracks, :users, :images
 
   root 'tracks#index'
   #get 'users/profile', as: 'user_root'
