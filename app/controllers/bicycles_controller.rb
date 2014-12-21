@@ -24,7 +24,6 @@ class BicyclesController < ApplicationController
   end
 
   def edit
-    @images = Image.select(type:'1', type_id: @bicycle.id)
   end
 
   def update

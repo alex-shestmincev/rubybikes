@@ -37,7 +37,9 @@ gem 'spring',        group: :development
 # Authorization gem
 gem 'devise'
 
+# For images
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+gem 'aws-sdk'
 
 
 # Use ActiveModel has_secure_password
