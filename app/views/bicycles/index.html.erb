@@ -6,6 +6,7 @@
     <table class="table table-hover">
       <thead>
       <tr>
+        <th></th>
         <th><%= t('bike_title') %></th>
         <th><%= t('bike_key') %> </th>
       </tr>
@@ -14,6 +15,7 @@
       <tbody>
       <% @bicycles.each do |bicycle| %>
           <tr>
+            <td><%= image_tag bicycle.avatar.url(:thumb) %></td>
             <td><%= bicycle.title %></td>
             <td><%= bicycle.key %></td>
             <td>

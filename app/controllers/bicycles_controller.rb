@@ -48,7 +48,7 @@ class BicyclesController < ApplicationController
 
   private
     def bicycle_params
-      params[:bicycle].permit(:title, :key, :status, :description)
+      params[:bicycle].permit(:title, :key, :status, :description, :avatar)
     end
 
     def bicycle_find_by_id

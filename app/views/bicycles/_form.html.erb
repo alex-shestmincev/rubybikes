@@ -1,4 +1,4 @@
-<%= form_for @bicycle   do |f| %>
+<%= form_for @bicycle, :html => { :multipart => true }  do |f| %>
 
 
     <% if @bicycle.errors.any? %>
@@ -33,6 +33,10 @@
     <p>
       <%= f.label :status %><br>
       <%= select(:bicycle, :status, [['Free', 1], ['Busy', 2], ['Reserved',3]]) %>
+    </p>
+
+    <p>
+      <%= f.file_field :avatar %>
     </p>
 
 
