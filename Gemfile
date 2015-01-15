@@ -8,6 +8,24 @@ group :pruduction do
   gem 'pg'
 end
 
+group :development, :test do
+  gem 'rspec-rails'
+
+end
+
+group :test do
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
+  gem 'email_spec'
+  gem 'timecop'
+  gem 'launchy'
+  gem 'spork'
+  gem 'shoulda-matchers'
+  gem 'webmock'
+  #gem 'cucumber-rails'
+end
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
 # Use sqlite3 as the database for Active Record
